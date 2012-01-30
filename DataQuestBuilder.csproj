@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BF1B9AE-A219-4A84-A042-AFFB0402CC26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataQuestBuilder</RootNamespace>
+    <AssemblyName>DataQuestBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DOLDatabase">
+      <HintPath>Resources\DOLDatabase.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>Resources\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.3.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Content\DatabaseManager.cs" />
+    <Compile Include="Content\DataQuestStep.cs" />
+    <Compile Include="Content\eProperties.cs" />
+    <Compile Include="Content\FindItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\FindItem.designer.cs">
+      <DependentUpon>FindItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\FindNPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\FindNPC.Designer.cs">
+      <DependentUpon>FindNPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\FindNPC2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\FindNPC2.designer.cs">
+      <DependentUpon>FindNPC2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\FindQuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\FindQuest.designer.cs">
+      <DependentUpon>FindQuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\FindStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\FindStart.Designer.cs">
+      <DependentUpon>FindStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Content\MySqlLoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\eStepType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\eStartType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Content\MySqlLoginForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Content\MySqlLoginForm.Designer.cs">
+      <DependentUpon>MySqlLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySqlLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySqlLoginForm.Designer.cs">
+      <DependentUpon>MySqlLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Content\FindItem.resx">
+      <DependentUpon>FindItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\FindNPC.resx">
+      <DependentUpon>FindNPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\FindNPC2.resx">
+      <DependentUpon>FindNPC2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\FindQuest.resx">
+      <DependentUpon>FindQuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\FindStart.resx">
+      <DependentUpon>FindStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\MySqlLoginControl.resx">
+      <DependentUpon>MySqlLoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Content\MySqlLoginForm.resx">
+      <DependentUpon>MySqlLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySqlLoginForm.resx">
+      <DependentUpon>MySqlLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green_arrow_right.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
