@@ -197,35 +197,33 @@ namespace DataQuestBuilder
         {
             if (MessageBox.Show("Are you sure you wish to create a new form?","Halt", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                questID.Text = 
-                questName.Text = 
-                eStartType.Text = 
-                startNPCName.Text = 
-                questNPCRegionID.Text = 
-                acceptText.Text = 
-                description.Text = 
-                sourceText.Text = 
-                eStepType.Text = 
-                stepText.Text = 
-                stepItem.Text = 
-                advanceText.Text =
-                targetName.Text = 
-                targetText.Text = 
-                collectItem.Text = 
-                maxCount.Text = 
-                questMinLevel.Text = 
-                questMaxLevel.Text = 
-                rewardMoney.Text = 
-                rewardXp.Text = 
-                rewardCLXp.Text = 
-                rewardRp.Text = 
-                rewardBp.Text = 
-                finishText.Text = 
-                optSelect.Text = 
-                finSelect.Text = 
-                questDependency.Text = 
-                allowedClasses.Text = 
-                questClassType.Text =
+                questID.Text = "";
+                questName.Text = "";
+                eStartType.Text = "";
+                startNPCName.Text = "";
+                questNPCRegionID.Text = "";
+                acceptText.Text = "";
+                description.Text = "";
+                sourceText.Text = "";
+                eStepType.Text = "";
+                stepText.Text = "";
+                stepItem.Text = "";
+                advanceText.Text = "";
+                targetName.Text = "";
+                targetText.Text = "";
+                collectItem.Text = "";
+                maxCount.Text = "";
+                questMinLevel.Text = "1";
+                questMaxLevel.Text = "50";
+                rewardMoney.Text = "0";
+                rewardXp.Text = "0";
+                rewardCLXp.Text = "0";
+                rewardRp.Text = "0";
+                rewardBp.Text = "0";
+                finishText.Text = "";
+                questDependency.Text = "";
+                allowedClasses.Text =
+                questClassType.Text = "";
                 getOpt.Text = "";
                 getFin.Text = "";
             }
@@ -968,18 +966,6 @@ namespace DataQuestBuilder
         #endregion
 
         #region Input validation
-        public void doCheck(string msg)  //check number only entries for letters
-        {
-            string[] wrongLetters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "+", "\"", ":", ">", "<", "?", ".", ",", "}", "{", "[", "]", "_", "=", "`", "~" };
-            for (int i = 0; i < wrongLetters.Length; i++)
-            {
-                if (questID.Text.Contains(wrongLetters[i]))
-                {
-                    MessageBox.Show("Characters not allowed! please use numbers for the "+msg);
-                    break;
-                }
-            }
-        }
         private void questID_TextChanged(object sender, EventArgs e)
         {
             int qID = 1;
@@ -992,7 +978,6 @@ namespace DataQuestBuilder
                 MessageBox.Show("Enter numbers between 1 and 32767 only!");
                 questID.Text = "1";
             }
-
             if (qID > 32767)
             {
                 MessageBox.Show("Select a Quest ID between 1 and 32767");
@@ -1000,50 +985,66 @@ namespace DataQuestBuilder
                 return;
             }
         }
-
+        private void description_TextChanged(object sender, EventArgs e)
+        {
+            label4.Text = (description.TextLength).ToString();
+            if (description.TextLength > 255)
+            {
+                MessageBox.Show("Quest description cannot exceed 255 characters.");
+            }
+        }
         private void questMaxLevel_TextChanged(object sender, EventArgs e)
         {
-            doCheck("Max Level");
+            int qMaxlvl = 50;
+            try
+            {
+                qMaxlvl = int.Parse(questMaxLevel.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Enter numbers only!");
+                questMaxLevel.Text = "50";
+            }
         }
-
         private void questMinLevel_TextChanged(object sender, EventArgs e)
         {
-            doCheck("Min Level");
+            
+            int qMinlvl = 1;
+            try
+            {
+                qMinlvl = int.Parse(questMinLevel.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Enter numbers only!");
+                questMinLevel.Text = "1";
+            }
         }
-
-        private void questNPCRegionID_TextChanged(object sender, EventArgs e)
-        {
-            doCheck("Region ID");
-        }
-
-        private void rewardMoney_TextChanged(object sender, EventArgs e)
-        {
-            doCheck("Reward(Money)");
-        }
-
-        private void rewardXp_TextChanged(object sender, EventArgs e)
-        {
-            doCheck("Reward(Exp)");
-        }
-        
-        private void rewardCLXp_TextChanged(object sender, EventArgs e)
-        {
-            doCheck("Reward(CLExp)");
-        }
-        
-        private void rewardRp_TextChanged(object sender, EventArgs e)
-        {
-            doCheck("Reward(RExp)");
-        }
-        
-        private void rewardBp_TextChanged(object sender, EventArgs e)
-        {
-            doCheck("Reward(BExp)");
-        }
-
         private void maxCount_TextChanged(object sender, EventArgs e)
         {
-            doCheck("Max Count");
+            int qMaxcou = 1;
+            try
+            {
+                qMaxcou = int.Parse(maxCount.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Enter numbers only!");
+                maxCount.Text = "1";
+            }
+        }
+        private void questNPCRegionID_TextChanged(object sender, EventArgs e)
+        {
+            int regId;
+            try
+            {
+                regId = int.Parse(questNPCRegionID.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Enter numbers only!");
+                questNPCRegionID.Text = "0";
+            }
         }
         #endregion
 
@@ -1054,28 +1055,23 @@ namespace DataQuestBuilder
             FindNPC2 npc2 = new FindNPC2();
             npc2.Show();
         }
-
         private void targetSelected_Click(object sender, EventArgs e)
         {
             targetName.Text = Settings.Default.SelectNPC2;
         }
-
         private void itemSearch_Click(object sender, EventArgs e)
         {
             FindItem item = new FindItem();
             item.Show();
         }
-
         private void optSelect_Click(object sender, EventArgs e)
         {
            getOpt.Text = Settings.Default.SelectOption;
         }
-
         private void finSelect_Click(object sender, EventArgs e)
         {
            getFin.Text = Settings.Default.SelectFinish;
         }
-
         private void startNPCSearch_Click(object sender, EventArgs e)
         {
             {
@@ -1083,39 +1079,28 @@ namespace DataQuestBuilder
                 npc.Show();
             }
         }
-
         private void setStart_Click(object sender, EventArgs e)
         {
             startNPCName.Text = Settings.Default.SelectStartNPC;
             questNPCRegionID.Text = Settings.Default.SelectStartNPCRegion;
         }
-
         private void questSearch_Click(object sender, EventArgs e)
         {
             FindQuest quest = new FindQuest();
             quest.Show();
         }
-
         private void setQuest_Click(object sender, EventArgs e)
         {
             questDependency.Text = Settings.Default.SelectQuest;
         }
-
         private void itemSelect_Click(object sender, EventArgs e)
         {
             stepItem.Text = Settings.Default.SelectStepItem;
         }
-
         private void collectSelect_Click(object sender, EventArgs e)
         {
             collectItem.Text = Settings.Default.SelectCollectItem;
         }
-        
-        private void groupBox5_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e) //Clear data button
         {
             int stepNum = int.Parse(stepNumber.Text);

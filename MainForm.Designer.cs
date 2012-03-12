@@ -38,8 +38,30 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.primaryTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.questNPCRegionID = new System.Windows.Forms.TextBox();
+            this.acceptText = new System.Windows.Forms.TextBox();
+            this.description = new System.Windows.Forms.RichTextBox();
+            this.questDependency = new System.Windows.Forms.TextBox();
+            this.questClassType = new System.Windows.Forms.TextBox();
+            this.startNPCName = new System.Windows.Forms.TextBox();
+            this.questID = new System.Windows.Forms.TextBox();
+            this.finishText = new System.Windows.Forms.RichTextBox();
+            this.sourceText = new System.Windows.Forms.RichTextBox();
+            this.stepText = new System.Windows.Forms.RichTextBox();
+            this.targetText = new System.Windows.Forms.RichTextBox();
+            this.advanceText = new System.Windows.Forms.RichTextBox();
+            this.rewardBp = new System.Windows.Forms.TextBox();
+            this.rewardCLXp = new System.Windows.Forms.TextBox();
+            this.rewardRp = new System.Windows.Forms.TextBox();
+            this.rewardMoney = new System.Windows.Forms.TextBox();
+            this.rewardXp = new System.Windows.Forms.TextBox();
+            this.stepItem = new System.Windows.Forms.TextBox();
+            this.targetName = new System.Windows.Forms.TextBox();
+            this.collectItem = new System.Windows.Forms.TextBox();
+            this.getFin = new System.Windows.Forms.TextBox();
+            this.getOpt = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.questMinLevel = new System.Windows.Forms.TextBox();
             this.setQuest = new System.Windows.Forms.Button();
@@ -48,56 +70,39 @@
             this.questSearch = new System.Windows.Forms.Button();
             this.maxCount = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.acceptText = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.eStartType = new DataQuestBuilder.eStartType();
             this.questMaxLevel = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.allowedClasses = new System.Windows.Forms.ListBox();
-            this.description = new System.Windows.Forms.RichTextBox();
-            this.questDependency = new System.Windows.Forms.TextBox();
-            this.questClassType = new System.Windows.Forms.TextBox();
-            this.startNPCName = new System.Windows.Forms.TextBox();
             this.questName = new System.Windows.Forms.TextBox();
-            this.questID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.finishText = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.individualStepBox = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.sourceText = new System.Windows.Forms.RichTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.stepText = new System.Windows.Forms.RichTextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.targetText = new System.Windows.Forms.RichTextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.advanceText = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rewardBp = new System.Windows.Forms.TextBox();
-            this.rewardCLXp = new System.Windows.Forms.TextBox();
-            this.rewardRp = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.rewardMoney = new System.Windows.Forms.TextBox();
-            this.rewardXp = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.stepItem = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.targetSelected = new System.Windows.Forms.Button();
-            this.targetName = new System.Windows.Forms.TextBox();
             this.targetSearch = new System.Windows.Forms.Button();
-            this.collectItem = new System.Windows.Forms.TextBox();
+            this.eStepType = new DataQuestBuilder.eStepType();
             this.label24 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -119,16 +124,12 @@
             this.finNumber = new System.Windows.Forms.Label();
             this.finrewardForward = new System.Windows.Forms.Button();
             this.finrewardBack = new System.Windows.Forms.Button();
-            this.getFin = new System.Windows.Forms.TextBox();
-            this.getOpt = new System.Windows.Forms.TextBox();
             this.collectSelect = new System.Windows.Forms.Button();
             this.itemSelect = new System.Windows.Forms.Button();
             this.finSelect = new System.Windows.Forms.Button();
             this.optSelect = new System.Windows.Forms.Button();
             this.itemSearch = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.eStepType = new DataQuestBuilder.eStepType();
-            this.eStartType = new DataQuestBuilder.eStartType();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.individualStepBox.SuspendLayout();
@@ -204,9 +205,254 @@
             this.primaryTooltip.IsBalloon = true;
             this.primaryTooltip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // questNPCRegionID
+            // 
+            this.questNPCRegionID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.questNPCRegionID.ForeColor = System.Drawing.Color.Black;
+            this.questNPCRegionID.Location = new System.Drawing.Point(115, 117);
+            this.questNPCRegionID.Name = "questNPCRegionID";
+            this.questNPCRegionID.Size = new System.Drawing.Size(51, 20);
+            this.questNPCRegionID.TabIndex = 100;
+            this.primaryTooltip.SetToolTip(this.questNPCRegionID, "How many times can players complete this quest?");
+            this.questNPCRegionID.TextChanged += new System.EventHandler(this.questNPCRegionID_TextChanged);
+            // 
+            // acceptText
+            // 
+            this.acceptText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.acceptText.ForeColor = System.Drawing.Color.Black;
+            this.acceptText.Location = new System.Drawing.Point(10, 234);
+            this.acceptText.Name = "acceptText";
+            this.acceptText.Size = new System.Drawing.Size(156, 20);
+            this.acceptText.TabIndex = 12;
+            this.primaryTooltip.SetToolTip(this.acceptText, "This is the bracketed [] text from \"Quest Start Text\" that will accept the quest." +
+        "  Enter without the brackets.");
+            // 
+            // description
+            // 
+            this.description.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.description.ForeColor = System.Drawing.Color.Black;
+            this.description.Location = new System.Drawing.Point(189, 192);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(121, 102);
+            this.description.TabIndex = 14;
+            this.description.Text = "";
+            this.primaryTooltip.SetToolTip(this.description, "This is the text displayed when the quest is offered, this is entered in the \"des" +
+        "cription\" field in the database.  Text used to accept the quest must be [bracket" +
+        "ed] and set in the \"Accept Text\" box!");
+            this.description.TextChanged += new System.EventHandler(this.description_TextChanged);
+            // 
+            // questDependency
+            // 
+            this.questDependency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.questDependency.ForeColor = System.Drawing.Color.Black;
+            this.questDependency.Location = new System.Drawing.Point(10, 196);
+            this.questDependency.Name = "questDependency";
+            this.questDependency.Size = new System.Drawing.Size(156, 20);
+            this.questDependency.TabIndex = 100;
+            this.primaryTooltip.SetToolTip(this.questDependency, "This is the quest that must be completed before this quest can be offered.");
+            // 
+            // questClassType
+            // 
+            this.questClassType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.questClassType.ForeColor = System.Drawing.Color.Black;
+            this.questClassType.Location = new System.Drawing.Point(11, 153);
+            this.questClassType.Name = "questClassType";
+            this.questClassType.Size = new System.Drawing.Size(100, 20);
+            this.questClassType.TabIndex = 8;
+            this.primaryTooltip.SetToolTip(this.questClassType, "Custom scripted quest steps, called on each step and when the quest is complete.");
+            // 
+            // startNPCName
+            // 
+            this.startNPCName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.startNPCName.ForeColor = System.Drawing.Color.Black;
+            this.startNPCName.Location = new System.Drawing.Point(10, 117);
+            this.startNPCName.Name = "startNPCName";
+            this.startNPCName.Size = new System.Drawing.Size(100, 20);
+            this.startNPCName.TabIndex = 100;
+            this.primaryTooltip.SetToolTip(this.startNPCName, "The NPC that offers or completes the quest (in the case of a one time drop type q" +
+        "uest).");
+            // 
+            // questID
+            // 
+            this.questID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.questID.ForeColor = System.Drawing.Color.Black;
+            this.questID.Location = new System.Drawing.Point(10, 34);
+            this.questID.Name = "questID";
+            this.questID.Size = new System.Drawing.Size(100, 20);
+            this.questID.TabIndex = 1;
+            this.primaryTooltip.SetToolTip(this.questID, "Enter a number for the quest ID from 0 to 32767.");
+            this.questID.TextChanged += new System.EventHandler(this.questID_TextChanged);
+            // 
+            // finishText
+            // 
+            this.finishText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.finishText.ForeColor = System.Drawing.Color.Black;
+            this.finishText.Location = new System.Drawing.Point(25, 371);
+            this.finishText.Name = "finishText";
+            this.finishText.Size = new System.Drawing.Size(460, 113);
+            this.finishText.TabIndex = 31;
+            this.finishText.Text = "";
+            this.primaryTooltip.SetToolTip(this.finishText, "This is the text the final NPC will display in the text window when the final ste" +
+        "p is completed.");
+            // 
+            // sourceText
+            // 
+            this.sourceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sourceText.ForeColor = System.Drawing.Color.Black;
+            this.sourceText.Location = new System.Drawing.Point(12, 28);
+            this.sourceText.Name = "sourceText";
+            this.sourceText.Size = new System.Drawing.Size(139, 97);
+            this.sourceText.TabIndex = 27;
+            this.sourceText.Text = "";
+            this.primaryTooltip.SetToolTip(this.sourceText, "This is the text that the NPC you are interacting with for this step will display" +
+        ".  If something must be whispered to advance from this step, enter it in [bracke" +
+        "ts].");
+            // 
+            // stepText
+            // 
+            this.stepText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.stepText.ForeColor = System.Drawing.Color.Black;
+            this.stepText.Location = new System.Drawing.Point(12, 180);
+            this.stepText.Name = "stepText";
+            this.stepText.Size = new System.Drawing.Size(139, 60);
+            this.stepText.TabIndex = 29;
+            this.stepText.Text = "";
+            this.primaryTooltip.SetToolTip(this.stepText, "This is the text that will be displayed in the quest journal for the current step" +
+        ".");
+            // 
+            // targetText
+            // 
+            this.targetText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.targetText.ForeColor = System.Drawing.Color.Black;
+            this.targetText.Location = new System.Drawing.Point(12, 256);
+            this.targetText.Name = "targetText";
+            this.targetText.Size = new System.Drawing.Size(139, 60);
+            this.targetText.TabIndex = 30;
+            this.targetText.Text = "";
+            this.primaryTooltip.SetToolTip(this.targetText, "Typically not used, this is text shown to player when current step ends");
+            // 
+            // advanceText
+            // 
+            this.advanceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.advanceText.ForeColor = System.Drawing.Color.Black;
+            this.advanceText.Location = new System.Drawing.Point(12, 144);
+            this.advanceText.Name = "advanceText";
+            this.advanceText.Size = new System.Drawing.Size(139, 20);
+            this.advanceText.TabIndex = 28;
+            this.advanceText.Text = "";
+            this.primaryTooltip.SetToolTip(this.advanceText, "This is the bracketed [] text from \"Step Text\" that will advance the step.  Enter" +
+        " the text without the brackets here.");
+            // 
+            // rewardBp
+            // 
+            this.rewardBp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rewardBp.ForeColor = System.Drawing.Color.Black;
+            this.rewardBp.Location = new System.Drawing.Point(49, 80);
+            this.rewardBp.Name = "rewardBp";
+            this.rewardBp.Size = new System.Drawing.Size(100, 20);
+            this.rewardBp.TabIndex = 25;
+            this.rewardBp.Text = "0";
+            this.primaryTooltip.SetToolTip(this.rewardBp, "BP granted at completion of this step.");
+            // 
+            // rewardCLXp
+            // 
+            this.rewardCLXp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rewardCLXp.ForeColor = System.Drawing.Color.Black;
+            this.rewardCLXp.Location = new System.Drawing.Point(200, 32);
+            this.rewardCLXp.Name = "rewardCLXp";
+            this.rewardCLXp.Size = new System.Drawing.Size(90, 20);
+            this.rewardCLXp.TabIndex = 24;
+            this.rewardCLXp.Text = "0";
+            this.primaryTooltip.SetToolTip(this.rewardCLXp, resources.GetString("rewardCLXp.ToolTip"));
+            // 
+            // rewardRp
+            // 
+            this.rewardRp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rewardRp.ForeColor = System.Drawing.Color.Black;
+            this.rewardRp.Location = new System.Drawing.Point(157, 80);
+            this.rewardRp.Name = "rewardRp";
+            this.rewardRp.Size = new System.Drawing.Size(100, 20);
+            this.rewardRp.TabIndex = 26;
+            this.rewardRp.Text = "0";
+            this.primaryTooltip.SetToolTip(this.rewardRp, "RP granted at completion of this step.");
+            // 
+            // rewardMoney
+            // 
+            this.rewardMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rewardMoney.ForeColor = System.Drawing.Color.Black;
+            this.rewardMoney.Location = new System.Drawing.Point(8, 32);
+            this.rewardMoney.Name = "rewardMoney";
+            this.rewardMoney.Size = new System.Drawing.Size(90, 20);
+            this.rewardMoney.TabIndex = 22;
+            this.rewardMoney.Text = "0";
+            this.primaryTooltip.SetToolTip(this.rewardMoney, "Money granted at completion of this step, this is the amount in copper.");
+            // 
+            // rewardXp
+            // 
+            this.rewardXp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rewardXp.ForeColor = System.Drawing.Color.Black;
+            this.rewardXp.Location = new System.Drawing.Point(105, 32);
+            this.rewardXp.Name = "rewardXp";
+            this.rewardXp.Size = new System.Drawing.Size(90, 20);
+            this.rewardXp.TabIndex = 23;
+            this.rewardXp.Text = "0";
+            this.primaryTooltip.SetToolTip(this.rewardXp, "XP granted at completion of this step.");
+            // 
+            // stepItem
+            // 
+            this.stepItem.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.stepItem.ForeColor = System.Drawing.Color.Black;
+            this.stepItem.Location = new System.Drawing.Point(9, 105);
+            this.stepItem.Name = "stepItem";
+            this.stepItem.Size = new System.Drawing.Size(135, 20);
+            this.stepItem.TabIndex = 20;
+            this.primaryTooltip.SetToolTip(this.stepItem, "Upon completion of this step (kill, interact, etc), you will receive this item.");
+            // 
+            // targetName
+            // 
+            this.targetName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.targetName.ForeColor = System.Drawing.Color.Black;
+            this.targetName.Location = new System.Drawing.Point(9, 30);
+            this.targetName.Name = "targetName";
+            this.targetName.Size = new System.Drawing.Size(135, 20);
+            this.targetName.TabIndex = 17;
+            this.primaryTooltip.SetToolTip(this.targetName, "The NPC or Mob that must be interacted with in some way to advance or complet the" +
+        " quest.");
+            // 
+            // collectItem
+            // 
+            this.collectItem.BackColor = System.Drawing.Color.Thistle;
+            this.collectItem.ForeColor = System.Drawing.Color.Black;
+            this.collectItem.Location = new System.Drawing.Point(159, 105);
+            this.collectItem.Name = "collectItem";
+            this.collectItem.Size = new System.Drawing.Size(135, 20);
+            this.collectItem.TabIndex = 21;
+            this.primaryTooltip.SetToolTip(this.collectItem, "This is an item you must give to an NPC to advance to the next step.");
+            // 
+            // getFin
+            // 
+            this.getFin.BackColor = System.Drawing.Color.NavajoWhite;
+            this.getFin.ForeColor = System.Drawing.Color.Black;
+            this.getFin.Location = new System.Drawing.Point(48, 68);
+            this.getFin.Name = "getFin";
+            this.getFin.Size = new System.Drawing.Size(228, 20);
+            this.getFin.TabIndex = 16;
+            this.primaryTooltip.SetToolTip(this.getFin, "Rewards given when the quest is complete.");
+            // 
+            // getOpt
+            // 
+            this.getOpt.BackColor = System.Drawing.Color.MistyRose;
+            this.getOpt.ForeColor = System.Drawing.Color.Black;
+            this.getOpt.Location = new System.Drawing.Point(48, 29);
+            this.getOpt.Name = "getOpt";
+            this.getOpt.Size = new System.Drawing.Size(228, 20);
+            this.getOpt.TabIndex = 15;
+            this.primaryTooltip.SetToolTip(this.getOpt, "Optional rewards, used only with \"RewardQuest.\"");
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.questNPCRegionID);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.questMinLevel);
@@ -243,20 +489,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Constant Quest Attributes";
             // 
-            // questNPCRegionID
+            // label4
             // 
-            this.questNPCRegionID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.questNPCRegionID.ForeColor = System.Drawing.Color.Black;
-            this.questNPCRegionID.Location = new System.Drawing.Point(115, 117);
-            this.questNPCRegionID.Name = "questNPCRegionID";
-            this.questNPCRegionID.Size = new System.Drawing.Size(51, 20);
-            this.questNPCRegionID.TabIndex = 100;
-            this.primaryTooltip.SetToolTip(this.questNPCRegionID, "How many times can players complete this quest?");
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(264, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(13, 13);
+            this.label4.TabIndex = 101;
+            this.label4.Text = "1";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(113, 17);
+            this.label12.Location = new System.Drawing.Point(113, 16);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(73, 13);
             this.label12.TabIndex = 20;
@@ -320,6 +565,7 @@
             this.maxCount.Name = "maxCount";
             this.maxCount.Size = new System.Drawing.Size(50, 20);
             this.maxCount.TabIndex = 9;
+            this.maxCount.TextChanged += new System.EventHandler(this.maxCount_TextChanged);
             // 
             // label32
             // 
@@ -330,21 +576,10 @@
             this.label32.TabIndex = 25;
             this.label32.Text = "Max Count#:";
             // 
-            // acceptText
-            // 
-            this.acceptText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.acceptText.ForeColor = System.Drawing.Color.Black;
-            this.acceptText.Location = new System.Drawing.Point(10, 234);
-            this.acceptText.Name = "acceptText";
-            this.acceptText.Size = new System.Drawing.Size(156, 20);
-            this.acceptText.TabIndex = 12;
-            this.primaryTooltip.SetToolTip(this.acceptText, "This is the bracketed [] text from \"Quest Start Text\" that will accept the quest." +
-        "  Enter without the brackets.");
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 255);
+            this.label15.Location = new System.Drawing.Point(7, 255);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 13);
             this.label15.TabIndex = 3;
@@ -359,6 +594,16 @@
             this.label14.TabIndex = 24;
             this.label14.Text = "Accept Text:";
             // 
+            // eStartType
+            // 
+            this.eStartType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.eStartType.ForeColor = System.Drawing.Color.Black;
+            this.eStartType.FormattingEnabled = true;
+            this.eStartType.Location = new System.Drawing.Point(9, 271);
+            this.eStartType.Name = "eStartType";
+            this.eStartType.Size = new System.Drawing.Size(157, 21);
+            this.eStartType.TabIndex = 13;
+            // 
             // questMaxLevel
             // 
             this.questMaxLevel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -372,7 +617,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(112, 57);
+            this.label13.Location = new System.Drawing.Point(113, 57);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(73, 13);
             this.label13.TabIndex = 21;
@@ -455,50 +700,6 @@
             this.allowedClasses.Size = new System.Drawing.Size(121, 95);
             this.allowedClasses.TabIndex = 7;
             // 
-            // description
-            // 
-            this.description.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.description.ForeColor = System.Drawing.Color.Black;
-            this.description.Location = new System.Drawing.Point(189, 185);
-            this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(121, 113);
-            this.description.TabIndex = 14;
-            this.description.Text = "";
-            this.primaryTooltip.SetToolTip(this.description, "This is the text displayed when the quest is offered, this is entered in the \"des" +
-        "cription\" field in the database.  Text used to accept the quest must be [bracket" +
-        "ed] and set in the \"Accept Text\" box!");
-            // 
-            // questDependency
-            // 
-            this.questDependency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.questDependency.ForeColor = System.Drawing.Color.Black;
-            this.questDependency.Location = new System.Drawing.Point(10, 196);
-            this.questDependency.Name = "questDependency";
-            this.questDependency.Size = new System.Drawing.Size(156, 20);
-            this.questDependency.TabIndex = 100;
-            this.primaryTooltip.SetToolTip(this.questDependency, "This is the quest that must be completed before this quest can be offered.");
-            // 
-            // questClassType
-            // 
-            this.questClassType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.questClassType.ForeColor = System.Drawing.Color.Black;
-            this.questClassType.Location = new System.Drawing.Point(11, 153);
-            this.questClassType.Name = "questClassType";
-            this.questClassType.Size = new System.Drawing.Size(100, 20);
-            this.questClassType.TabIndex = 8;
-            this.primaryTooltip.SetToolTip(this.questClassType, "Custom scripted quest steps, called on each step and when the quest is complete.");
-            // 
-            // startNPCName
-            // 
-            this.startNPCName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.startNPCName.ForeColor = System.Drawing.Color.Black;
-            this.startNPCName.Location = new System.Drawing.Point(10, 117);
-            this.startNPCName.Name = "startNPCName";
-            this.startNPCName.Size = new System.Drawing.Size(100, 20);
-            this.startNPCName.TabIndex = 100;
-            this.primaryTooltip.SetToolTip(this.startNPCName, "The NPC that offers or completes the quest (in the case of a one time drop type q" +
-        "uest).");
-            // 
             // questName
             // 
             this.questName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -507,17 +708,6 @@
             this.questName.Name = "questName";
             this.questName.Size = new System.Drawing.Size(100, 20);
             this.questName.TabIndex = 3;
-            // 
-            // questID
-            // 
-            this.questID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.questID.ForeColor = System.Drawing.Color.Black;
-            this.questID.Location = new System.Drawing.Point(10, 34);
-            this.questID.Name = "questID";
-            this.questID.Size = new System.Drawing.Size(100, 20);
-            this.questID.TabIndex = 1;
-            this.primaryTooltip.SetToolTip(this.questID, "Enter a number for the quest ID from 0 to 32767.");
-            this.questID.TextChanged += new System.EventHandler(this.questID_TextChanged);
             // 
             // label7
             // 
@@ -540,11 +730,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(186, 169);
+            this.label5.Location = new System.Drawing.Point(188, 175);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 13);
+            this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Quest Start Text:";
+            this.label5.Text = "Start Text:";
             // 
             // label2
             // 
@@ -558,23 +748,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 17);
+            this.label1.Location = new System.Drawing.Point(7, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID #:";
-            // 
-            // finishText
-            // 
-            this.finishText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.finishText.ForeColor = System.Drawing.Color.Black;
-            this.finishText.Location = new System.Drawing.Point(25, 371);
-            this.finishText.Name = "finishText";
-            this.finishText.Size = new System.Drawing.Size(460, 113);
-            this.finishText.TabIndex = 31;
-            this.finishText.Text = "";
-            this.primaryTooltip.SetToolTip(this.finishText, "This is the text the final NPC will display in the text window when the final ste" +
-        "p is completed.");
             // 
             // label9
             // 
@@ -642,19 +820,6 @@
             this.label19.TabIndex = 17;
             this.label19.Text = "Source Text:";
             // 
-            // sourceText
-            // 
-            this.sourceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.sourceText.ForeColor = System.Drawing.Color.Black;
-            this.sourceText.Location = new System.Drawing.Point(12, 28);
-            this.sourceText.Name = "sourceText";
-            this.sourceText.Size = new System.Drawing.Size(139, 97);
-            this.sourceText.TabIndex = 27;
-            this.sourceText.Text = "";
-            this.primaryTooltip.SetToolTip(this.sourceText, "This is the text that the NPC you are interacting with for this step will display" +
-        ".  If something must be whispered to advance from this step, enter it in [bracke" +
-        "ts].");
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -663,18 +828,6 @@
             this.label20.Size = new System.Drawing.Size(67, 13);
             this.label20.TabIndex = 19;
             this.label20.Text = "Step Text:";
-            // 
-            // stepText
-            // 
-            this.stepText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.stepText.ForeColor = System.Drawing.Color.Black;
-            this.stepText.Location = new System.Drawing.Point(12, 180);
-            this.stepText.Name = "stepText";
-            this.stepText.Size = new System.Drawing.Size(139, 60);
-            this.stepText.TabIndex = 29;
-            this.stepText.Text = "";
-            this.primaryTooltip.SetToolTip(this.stepText, "This is the text that will be displayed in the quest journal for the current step" +
-        ".");
             // 
             // label22
             // 
@@ -685,17 +838,6 @@
             this.label22.TabIndex = 23;
             this.label22.Text = "Advance Text:";
             // 
-            // targetText
-            // 
-            this.targetText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.targetText.ForeColor = System.Drawing.Color.Black;
-            this.targetText.Location = new System.Drawing.Point(12, 256);
-            this.targetText.Name = "targetText";
-            this.targetText.Size = new System.Drawing.Size(139, 60);
-            this.targetText.TabIndex = 30;
-            this.targetText.Text = "";
-            this.primaryTooltip.SetToolTip(this.targetText, "Typically not used, this is text shown to player when current step ends");
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -704,18 +846,6 @@
             this.label26.Size = new System.Drawing.Size(79, 13);
             this.label26.TabIndex = 29;
             this.label26.Text = "Target Text:";
-            // 
-            // advanceText
-            // 
-            this.advanceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.advanceText.ForeColor = System.Drawing.Color.Black;
-            this.advanceText.Location = new System.Drawing.Point(12, 144);
-            this.advanceText.Name = "advanceText";
-            this.advanceText.Size = new System.Drawing.Size(139, 20);
-            this.advanceText.TabIndex = 28;
-            this.advanceText.Text = "";
-            this.primaryTooltip.SetToolTip(this.advanceText, "This is the bracketed [] text from \"Step Text\" that will advance the step.  Enter" +
-        " the text without the brackets here.");
             // 
             // groupBox2
             // 
@@ -736,39 +866,6 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Reward";
-            // 
-            // rewardBp
-            // 
-            this.rewardBp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rewardBp.ForeColor = System.Drawing.Color.Black;
-            this.rewardBp.Location = new System.Drawing.Point(49, 80);
-            this.rewardBp.Name = "rewardBp";
-            this.rewardBp.Size = new System.Drawing.Size(100, 20);
-            this.rewardBp.TabIndex = 25;
-            this.rewardBp.Text = "0";
-            this.primaryTooltip.SetToolTip(this.rewardBp, "BP granted at completion of this step.");
-            // 
-            // rewardCLXp
-            // 
-            this.rewardCLXp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rewardCLXp.ForeColor = System.Drawing.Color.Black;
-            this.rewardCLXp.Location = new System.Drawing.Point(200, 32);
-            this.rewardCLXp.Name = "rewardCLXp";
-            this.rewardCLXp.Size = new System.Drawing.Size(90, 20);
-            this.rewardCLXp.TabIndex = 24;
-            this.rewardCLXp.Text = "0";
-            this.primaryTooltip.SetToolTip(this.rewardCLXp, resources.GetString("rewardCLXp.ToolTip"));
-            // 
-            // rewardRp
-            // 
-            this.rewardRp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rewardRp.ForeColor = System.Drawing.Color.Black;
-            this.rewardRp.Location = new System.Drawing.Point(157, 80);
-            this.rewardRp.Name = "rewardRp";
-            this.rewardRp.Size = new System.Drawing.Size(100, 20);
-            this.rewardRp.TabIndex = 26;
-            this.rewardRp.Text = "0";
-            this.primaryTooltip.SetToolTip(this.rewardRp, "RP granted at completion of this step.");
             // 
             // label31
             // 
@@ -815,30 +912,6 @@
             this.label27.TabIndex = 34;
             this.label27.Text = "XP#:";
             // 
-            // rewardMoney
-            // 
-            this.rewardMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rewardMoney.ForeColor = System.Drawing.Color.Black;
-            this.rewardMoney.Location = new System.Drawing.Point(8, 32);
-            this.rewardMoney.Name = "rewardMoney";
-            this.rewardMoney.Size = new System.Drawing.Size(90, 20);
-            this.rewardMoney.TabIndex = 22;
-            this.rewardMoney.Text = "0";
-            this.primaryTooltip.SetToolTip(this.rewardMoney, "Money granted at completion of this step, this is the amount in copper.");
-            this.rewardMoney.TextChanged += new System.EventHandler(this.rewardMoney_TextChanged);
-            // 
-            // rewardXp
-            // 
-            this.rewardXp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rewardXp.ForeColor = System.Drawing.Color.Black;
-            this.rewardXp.Location = new System.Drawing.Point(105, 32);
-            this.rewardXp.Name = "rewardXp";
-            this.rewardXp.Size = new System.Drawing.Size(90, 20);
-            this.rewardXp.TabIndex = 23;
-            this.rewardXp.Text = "0";
-            this.primaryTooltip.SetToolTip(this.rewardXp, "XP granted at completion of this step.");
-            this.rewardXp.TextChanged += new System.EventHandler(this.rewardXp_TextChanged);
-            // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.White;
@@ -858,17 +931,6 @@
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Target Info";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
-            // 
-            // stepItem
-            // 
-            this.stepItem.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.stepItem.ForeColor = System.Drawing.Color.Black;
-            this.stepItem.Location = new System.Drawing.Point(9, 105);
-            this.stepItem.Name = "stepItem";
-            this.stepItem.Size = new System.Drawing.Size(135, 20);
-            this.stepItem.TabIndex = 20;
-            this.primaryTooltip.SetToolTip(this.stepItem, "Upon completion of this step (kill, interact, etc), you will receive this item.");
             // 
             // label21
             // 
@@ -889,17 +951,6 @@
             this.targetSelected.UseVisualStyleBackColor = true;
             this.targetSelected.Click += new System.EventHandler(this.targetSelected_Click);
             // 
-            // targetName
-            // 
-            this.targetName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.targetName.ForeColor = System.Drawing.Color.Black;
-            this.targetName.Location = new System.Drawing.Point(9, 30);
-            this.targetName.Name = "targetName";
-            this.targetName.Size = new System.Drawing.Size(135, 20);
-            this.targetName.TabIndex = 17;
-            this.primaryTooltip.SetToolTip(this.targetName, "The NPC or Mob that must be interacted with in some way to advance or complet the" +
-        " quest.");
-            // 
             // targetSearch
             // 
             this.targetSearch.Location = new System.Drawing.Point(159, 28);
@@ -910,15 +961,15 @@
             this.targetSearch.UseVisualStyleBackColor = true;
             this.targetSearch.Click += new System.EventHandler(this.targetSearch_Click);
             // 
-            // collectItem
+            // eStepType
             // 
-            this.collectItem.BackColor = System.Drawing.Color.Thistle;
-            this.collectItem.ForeColor = System.Drawing.Color.Black;
-            this.collectItem.Location = new System.Drawing.Point(159, 105);
-            this.collectItem.Name = "collectItem";
-            this.collectItem.Size = new System.Drawing.Size(135, 20);
-            this.collectItem.TabIndex = 21;
-            this.primaryTooltip.SetToolTip(this.collectItem, "This is an item you must give to an NPC to advance to the next step.");
+            this.eStepType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.eStepType.ForeColor = System.Drawing.Color.Black;
+            this.eStepType.FormattingEnabled = true;
+            this.eStepType.Location = new System.Drawing.Point(9, 64);
+            this.eStepType.Name = "eStepType";
+            this.eStepType.Size = new System.Drawing.Size(135, 21);
+            this.eStepType.TabIndex = 20;
             // 
             // label24
             // 
@@ -996,7 +1047,7 @@
             // stepNumber
             // 
             this.stepNumber.AutoSize = true;
-            this.stepNumber.Location = new System.Drawing.Point(55, 24);
+            this.stepNumber.Location = new System.Drawing.Point(57, 24);
             this.stepNumber.Name = "stepNumber";
             this.stepNumber.Size = new System.Drawing.Size(13, 13);
             this.stepNumber.TabIndex = 5;
@@ -1135,26 +1186,6 @@
             this.finrewardBack.UseVisualStyleBackColor = true;
             this.finrewardBack.Click += new System.EventHandler(this.finrewardBack_Click);
             // 
-            // getFin
-            // 
-            this.getFin.BackColor = System.Drawing.Color.NavajoWhite;
-            this.getFin.ForeColor = System.Drawing.Color.Black;
-            this.getFin.Location = new System.Drawing.Point(48, 68);
-            this.getFin.Name = "getFin";
-            this.getFin.Size = new System.Drawing.Size(228, 20);
-            this.getFin.TabIndex = 16;
-            this.primaryTooltip.SetToolTip(this.getFin, "Rewards given when the quest is complete.");
-            // 
-            // getOpt
-            // 
-            this.getOpt.BackColor = System.Drawing.Color.MistyRose;
-            this.getOpt.ForeColor = System.Drawing.Color.Black;
-            this.getOpt.Location = new System.Drawing.Point(48, 29);
-            this.getOpt.Name = "getOpt";
-            this.getOpt.Size = new System.Drawing.Size(228, 20);
-            this.getOpt.TabIndex = 15;
-            this.primaryTooltip.SetToolTip(this.getOpt, "Optional rewards, used only with \"RewardQuest.\"");
-            // 
             // collectSelect
             // 
             this.collectSelect.BackColor = System.Drawing.Color.Thistle;
@@ -1229,26 +1260,6 @@
             this.groupBox8.TabIndex = 31;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Item Search";
-            // 
-            // eStepType
-            // 
-            this.eStepType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.eStepType.ForeColor = System.Drawing.Color.Black;
-            this.eStepType.FormattingEnabled = true;
-            this.eStepType.Location = new System.Drawing.Point(9, 64);
-            this.eStepType.Name = "eStepType";
-            this.eStepType.Size = new System.Drawing.Size(135, 21);
-            this.eStepType.TabIndex = 20;
-            // 
-            // eStartType
-            // 
-            this.eStartType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.eStartType.ForeColor = System.Drawing.Color.Black;
-            this.eStartType.FormattingEnabled = true;
-            this.eStartType.Location = new System.Drawing.Point(9, 271);
-            this.eStartType.Name = "eStartType";
-            this.eStartType.Size = new System.Drawing.Size(157, 21);
-            this.eStartType.TabIndex = 13;
             // 
             // MainForm
             // 
@@ -1345,6 +1356,9 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox rewardMoney;
         private System.Windows.Forms.TextBox rewardXp;
+        private System.Windows.Forms.TextBox rewardRp;
+        private System.Windows.Forms.TextBox rewardBp;
+        private System.Windows.Forms.TextBox rewardCLXp;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button targetSearch;
@@ -1360,9 +1374,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox rewardRp;
-        private System.Windows.Forms.TextBox rewardBp;
-        private System.Windows.Forms.TextBox rewardCLXp;
         private System.Windows.Forms.TextBox maxCount;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label34;
@@ -1389,6 +1400,7 @@
         private System.Windows.Forms.TextBox questNPCRegionID;
         private System.Windows.Forms.Button clearindstep;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
 
     }
 }
