@@ -77,7 +77,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.allowedClasses = new System.Windows.Forms.ListBox();
+            this.allowedClasses = new eCharacterClass();
             this.questName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -645,55 +645,7 @@
             // 
             this.allowedClasses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.allowedClasses.ForeColor = System.Drawing.Color.Black;
-            this.allowedClasses.FormattingEnabled = true;
-            this.allowedClasses.Items.AddRange(new object[] {
-            "Armsman",
-            "Cabalist",
-            "Cleric",
-            "Friar",
-            "Heretic",
-            "Infiltrator",
-            "Mauler",
-            "Mercenary",
-            "Minstrel",
-            "Necromancer",
-            "Paladin",
-            "Reaver",
-            "Scout",
-            "Sorcerer",
-            "Theurgist",
-            "Wizard",
-            "Animist",
-            "Bainshee",
-            "Bard",
-            "Blademaster",
-            "Champion",
-            "Druid",
-            "Eldritch",
-            "Enchanter",
-            "Hero",
-            "Mauler",
-            "Mentalist",
-            "Nightshade",
-            "Ranger",
-            "Valewalker",
-            "Vampiir",
-            "Warden",
-            "Berserker",
-            "Bonedancer",
-            "Healer",
-            "Hunter",
-            "Mauler",
-            "Runemaster",
-            "Savage",
-            "Shadowblade",
-            "Shaman",
-            "Skald",
-            "Spiritmaster",
-            "Thane",
-            "Valkyrie",
-            "Warlock",
-            "Warrior"});
+            this.allowedClasses.FormattingEnabled = true;            
             this.allowedClasses.Location = new System.Drawing.Point(189, 34);
             this.allowedClasses.Name = "allowedClasses";
             this.allowedClasses.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
@@ -1308,6 +1260,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private eStartType eStartType;
         private eStepType eStepType;
+        private eCharacterClass allowedClasses;
         private System.Windows.Forms.ToolTip primaryTooltip;
         private System.Windows.Forms.ToolStripMenuItem newDataQuestToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1317,7 +1270,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ListBox allowedClasses;
         private System.Windows.Forms.RichTextBox description;
         private System.Windows.Forms.RichTextBox finishText;
         private System.Windows.Forms.TextBox questDependency;

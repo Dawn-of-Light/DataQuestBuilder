@@ -3,10 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DOL.Database;
-using DOL.Database.Connection;
-using DOL.Database.Handlers;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using DataQuestBuilder.Content;
 using DataQuestBuilder.Properties;
@@ -15,7 +11,7 @@ namespace DataQuestBuilder
 {
     public partial class MainForm : Form
     {
-        public Dictionary<int, string> opt_dictionary;
+    	public Dictionary<int, string> opt_dictionary;
         public Dictionary<int, string> fin_dictionary;
         public Dictionary<int, string> advtext_dictionary;
         public Dictionary<int, string> colitem_dictionary;
@@ -29,11 +25,11 @@ namespace DataQuestBuilder
         public Dictionary<int, string> steptext_dictionary;
         public Dictionary<int, string> trgtname_dictionary;
         public Dictionary<int, string> trgttext_dictionary;
-        public Dictionary<int, string> steptype_dictionary;
+        public Dictionary<int, string> steptype_dictionary;        
 
         public MainForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
             opt_dictionary = new Dictionary<int, string>();
             fin_dictionary = new Dictionary<int, string>();
             advtext_dictionary = new Dictionary<int, string>();
@@ -48,7 +44,7 @@ namespace DataQuestBuilder
             steptext_dictionary = new Dictionary<int, string>();
             trgtname_dictionary = new Dictionary<int, string>();
             trgttext_dictionary = new Dictionary<int, string>();
-            steptype_dictionary = new Dictionary<int, string>();
+            steptype_dictionary = new Dictionary<int, string>();            
         }
 
         private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +72,7 @@ namespace DataQuestBuilder
             eStartType.SelectedIndexChanged += new EventHandler(ShowStartTypeTooltip);
             eStartType.Load();
             eStepType.Load();
+            allowedClasses.Load();
         }
 
         void ShowStartTypeTooltip(object sender, EventArgs e)
@@ -845,7 +842,7 @@ namespace DataQuestBuilder
         {
             int stepNum = int.Parse(stepNumber.Text);
             int optNum = int.Parse(optNumber.Text);
-            int finNum = int.Parse(finNumber.Text);
+            int finNum = int.Parse(finNumber.Text);            
             if (!steptype_dictionary.ContainsKey(stepNum)) //Adds step data to the dictionary on last step if the forward/back button has not been pressed yet
             {
                 advtext_dictionary.Remove(stepNum);
@@ -888,7 +885,7 @@ namespace DataQuestBuilder
 
             try
             {
-                #region String conversions
+                #region String conversions                
                 string opt = String.Join("|", Array.ConvertAll(opt_dictionary.Values.ToArray(), i => i.ToString()));
                 string fin = String.Join("|", Array.ConvertAll(fin_dictionary.Values.ToArray(), i => i.ToString()));
                 string adv = String.Join("|", Array.ConvertAll(advtext_dictionary.Values.ToArray(), i => i.ToString()));
@@ -904,8 +901,9 @@ namespace DataQuestBuilder
                 string trgnm = String.Join("|", Array.ConvertAll(trgtname_dictionary.Values.ToArray(), i => i.ToString()));
                 string trgtx = String.Join("|", Array.ConvertAll(trgttext_dictionary.Values.ToArray(), i => i.ToString()));
                 string stptp = String.Join("|", Array.ConvertAll(steptype_dictionary.Values.ToArray(), i => i.ToString()));
-                
+                string acl = String.Join("|", allowedClasses.SelectedItems.Cast<object>().Select(i => i.ToString()));
                 //eStepType string replace values:
+                
                 StringBuilder stype = new StringBuilder(stptp);
                 stype.Replace("Kill", "0");
                 stype.Replace("killFinish", "1");
@@ -920,7 +918,57 @@ namespace DataQuestBuilder
                 stype.Replace("Collect", "10");
                 stype.Replace("collectFinish", "11");
                 string steptp = stype.ToString();
-
+				
+                StringBuilder allcl = new StringBuilder(acl);
+				allcl.Replace("Armsman", "2");
+				allcl.Replace("Cabalist", "13");
+				allcl.Replace("Cleric", "6");
+				allcl.Replace("Friar", "10");
+				allcl.Replace("Heretic", "33");
+				allcl.Replace("Infitrator", "9");
+				allcl.Replace("Mercenary", "11");
+				allcl.Replace("Minstrel", "4");
+				allcl.Replace("Necromancer", "12");
+				allcl.Replace("Paladin", "1");
+				allcl.Replace("Reaver", "19");
+				allcl.Replace("Scout", "3");
+				allcl.Replace("Sorcerer", "8");
+				allcl.Replace("Theurgist", "5");
+				allcl.Replace("Wizard", "7");
+				allcl.Replace("MaulerAlb", "60");
+				allcl.Replace("Berserker", "31");
+				allcl.Replace("Bonedancer", "30");
+				allcl.Replace("Healer", "36");
+				allcl.Replace("Hunter", "35");
+				allcl.Replace("Runemaster", "29");
+				allcl.Replace("Savage", "32");
+				allcl.Replace("Shadowblade", "23");
+				allcl.Replace("Shaman", "28");
+				allcl.Replace("Skald", "24");
+				allcl.Replace("Spiritmaster", "27");
+				allcl.Replace("Thane", "21");
+				allcl.Replace("Valkyrie", "34");
+				allcl.Replace("Warlock", "59");
+				allcl.Replace("Warrior", "22");
+				allcl.Replace("MaulerMid", "61");
+				allcl.Replace("Animist", "55");
+				allcl.Replace("Bainshee", "39");
+				allcl.Replace("Bard", "48");
+				allcl.Replace("Blademaster", "43");
+				allcl.Replace("Champ", "45");
+				allcl.Replace("Druid", "47");
+				allcl.Replace("Eldritch", "40");
+				allcl.Replace("Enchanter", "41");
+				allcl.Replace("Hero", "44");
+				allcl.Replace("Mentalist", "42");
+				allcl.Replace("Nightshade", "49");
+				allcl.Replace("Ranger", "50");
+				allcl.Replace("Valewalker", "56");
+				allcl.Replace("Vampiir", "58");
+				allcl.Replace("Warden", "46");
+				allcl.Replace("MaulerMid", "62");
+				string aclts = allcl.ToString();
+                
                 #endregion
 
                 DatabaseManager.SetDatabaseConnection(Settings.Default.Hostname, Settings.Default.Port, Settings.Default.Database, Settings.Default.Username, Settings.Default.Password);
@@ -952,7 +1000,7 @@ namespace DataQuestBuilder
                 q.FinalRewardItemTemplates = fin;
                 q.FinishText = finishText.Text;
                 q.QuestDependency = questDependency.Text; //might need to serialize....if quest has multiple dependencies
-                q.AllowedClasses = allowedClasses.Text;
+                q.AllowedClasses = aclts; //serialized
                 q.ClassType = questClassType.Text;
                 DatabaseManager.Database.AddObject(q);
 
