@@ -114,7 +114,10 @@
     </Compile>
     <Compile Include="Controls\eStepType.cs">
       <SubType>Component</SubType>
-    </Compile>
+    </Compile>	
+	<Compile Include="Controls\eCharacterClass.cs">
+      <SubType>Component</SubType>
+    </Compile>	
     <Compile Include="Controls\eStartType.cs">
       <SubType>Component</SubType>
     </Compile>
