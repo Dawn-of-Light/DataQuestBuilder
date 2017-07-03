@@ -925,7 +925,7 @@ namespace DataQuestBuilder
 				allcl.Replace("Cleric", "6");
 				allcl.Replace("Friar", "10");
 				allcl.Replace("Heretic", "33");
-				allcl.Replace("Infitrator", "9");
+				allcl.Replace("Infiltrator", "9");
 				allcl.Replace("Mercenary", "11");
 				allcl.Replace("Minstrel", "4");
 				allcl.Replace("Necromancer", "12");
@@ -955,7 +955,7 @@ namespace DataQuestBuilder
 				allcl.Replace("Bainshee", "39");
 				allcl.Replace("Bard", "48");
 				allcl.Replace("Blademaster", "43");
-				allcl.Replace("Champ", "45");
+				allcl.Replace("Champion", "45");
 				allcl.Replace("Druid", "47");
 				allcl.Replace("Eldritch", "40");
 				allcl.Replace("Enchanter", "41");
@@ -966,7 +966,7 @@ namespace DataQuestBuilder
 				allcl.Replace("Valewalker", "56");
 				allcl.Replace("Vampiir", "58");
 				allcl.Replace("Warden", "46");
-				allcl.Replace("MaulerMid", "62");
+				allcl.Replace("MaulerHib", "62");
 				string aclts = allcl.ToString();
                 
                 #endregion
